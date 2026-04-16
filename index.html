@@ -10,56 +10,37 @@
 <link rel="manifest" href="manifest.json"/>
 <link rel="apple-touch-icon" href="icon-192.png"/>
 <title>약 먹었어?</title>
-  <base href="/yakmeogeosseo/">
+<base href="/yakmeogeosseo/">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif}
 #app{max-width:430px;margin:0 auto;height:100%;display:flex;flex-direction:column;background:#fff;position:relative;overflow:hidden}
-
-/* status */
-.status-bar{padding:env(safe-area-inset-top, 14px) 20px 6px;padding-top:max(env(safe-area-inset-top),14px);display:flex;justify-content:space-between;align-items:center;background:#fff}
-.status-time{font-size:14px;font-weight:500;color:#1c1c1e}
-.status-icons{font-size:12px;color:#8e8e93}
-
-/* screens */
+.status-bar{padding-top:max(env(safe-area-inset-top),14px);padding-left:20px;padding-right:20px;padding-bottom:6px;display:flex;justify-content:space-between;align-items:center;background:#fff}
 .screen{flex:1;display:none;flex-direction:column;overflow:hidden}
 .screen.active{display:flex}
 .top-bar{padding:8px 20px 6px;display:flex;align-items:center;gap:10px;background:#fff}
 .app-name{font-size:22px;font-weight:600;color:#1c1c1e;flex:1;letter-spacing:-0.3px}
 .top-title{font-size:18px;font-weight:600;color:#1c1c1e;flex:1}
-.icon-btn{width:34px;height:34px;border-radius:50%;background:#f2f2f7;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#8e8e93;font-size:18px;font-weight:300}
+.icon-btn{width:34px;height:34px;border-radius:50%;background:#f2f2f7;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#8e8e93;font-size:18px}
 .content{flex:1;padding:8px 20px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch}
-
-/* profile + rate */
 .hero{display:flex;align-items:center;gap:14px;margin-bottom:20px}
 .profile-wrap{width:80px;height:80px;border-radius:50%;border:1.5px dashed #c7c7cc;display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;flex-shrink:0;background:#f2f2f7}
 .profile-wrap img{width:100%;height:100%;object-fit:cover}
-.profile-placeholder{display:flex;flex-direction:column;align-items:center;gap:2px}
 .rate-section{flex:1}
-.rate-label{font-size:13px;color:#8e8e93;margin-bottom:3px}
-.rate-value{font-size:17px;font-weight:600;color:#1c1c1e;margin-bottom:8px}
 .bar-bg{width:100%;height:7px;background:#f2f2f7;border-radius:20px;overflow:hidden}
-.bar-fill{height:100%;border-radius:20px;background:#1D9E75;transition:width 0.45s cubic-bezier(.4,0,.2,1)}
-
-/* med cards */
-.med-card{background:#fff;border:0.5px solid #e5e5ea;border-radius:16px;padding:14px 16px;margin-bottom:10px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:background 0.12s;-webkit-user-select:none}
+.bar-fill{height:100%;border-radius:20px;background:#1D9E75;transition:width 0.45s}
+.med-card{background:#fff;border:0.5px solid #e5e5ea;border-radius:16px;padding:14px 16px;margin-bottom:10px;display:flex;align-items:center;gap:12px;-webkit-user-select:none}
 .med-card:active{background:#f2f2f7}
-.med-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.med-name{font-size:15px;font-weight:500;color:#1c1c1e;transition:all 0.2s}
-.med-name.done{text-decoration:line-through;opacity:0.38}
-.med-time-label{font-size:12px;color:#8e8e93;margin-top:2px}
-.check-btn{width:28px;height:28px;border-radius:50%;border:1.5px solid #c7c7cc;background:transparent;display:flex;align-items:center;justify-content:center;font-size:13px;color:#8e8e93;flex-shrink:0;transition:all 0.2s}
+.med-main{flex:1;cursor:pointer;display:flex;align-items:center;gap:12px}
+.edit-btn{width:32px;height:32px;border-radius:50%;background:#f2f2f7;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
+.check-btn{width:28px;height:28px;border-radius:50%;border:1.5px solid #c7c7cc;background:transparent;display:flex;align-items:center;justify-content:center;font-size:13px;color:#8e8e93;flex-shrink:0;cursor:pointer}
 .check-btn.done{background:#1D9E75;border-color:#1D9E75;color:#fff}
-.empty-hint{font-size:14px;color:#8e8e93;text-align:center;margin-top:48px;line-height:1.7}
-
-/* form */
 .add-form{padding:4px 20px 20px}
 .field-label{font-size:13px;color:#8e8e93;margin-bottom:6px;margin-top:18px;display:block}
 .field-input{width:100%;padding:12px 14px;border:0.5px solid #c7c7cc;border-radius:12px;font-size:16px;background:#fff;color:#1c1c1e;outline:none;-webkit-appearance:none;font-family:inherit}
-.field-input:focus{border-color:#1D9E75;outline:3px solid rgba(29,158,117,0.15)}
-.save-btn{width:100%;margin-top:22px;padding:15px;background:#1D9E75;color:#fff;border:none;border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;letter-spacing:-0.2px}
-
-/* calendar */
+.field-input:focus{border-color:#1D9E75}
+.save-btn{width:100%;margin-top:22px;padding:15px;background:#1D9E75;color:#fff;border:none;border-radius:14px;font-size:16px;font-weight:600;cursor:pointer}
+.del-btn{width:100%;margin-top:10px;padding:15px;background:transparent;color:#E24B4A;border:0.5px solid #E24B4A;border-radius:14px;font-size:16px;font-weight:600;cursor:pointer}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:6px}
 .cal-head{font-size:11px;color:#8e8e93;text-align:center;padding:4px 0;font-weight:500}
 .cal-day{height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#8e8e93}
@@ -67,58 +48,43 @@ html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSyste
 .cal-day.miss{background:#FCEBEB;color:#A32D2D}
 .cal-day.today{border:1.5px solid #1D9E75;color:#1D9E75;font-weight:600}
 .cal-day.empty{opacity:0}
-.month-rate-box{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding:13px 16px;background:#f2f2f7;border-radius:14px}
-.legend{display:flex;gap:14px;margin-top:12px}
-.legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:#8e8e93}
-.legend-dot{width:11px;height:11px;border-radius:3px}
-
-/* tab bar */
 .tab-bar{padding:8px 16px;padding-bottom:max(env(safe-area-inset-bottom),12px);background:#fff}
 .tab-pill{display:flex;background:#f2f2f7;border-radius:22px;padding:4px;gap:2px}
-.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border:none;background:transparent;padding:8px 4px;border-radius:18px;transition:background 0.2s cubic-bezier(.4,0,.2,1)}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border:none;background:transparent;padding:8px 4px;border-radius:18px;transition:background 0.2s}
 .tab.active{background:#fff}
-.tab-label{font-size:10px;color:#8e8e93;transition:color 0.2s;font-weight:400}
+.tab-label{font-size:10px;color:#8e8e93;font-weight:400}
 .tab.active .tab-label{color:#1D9E75;font-weight:600}
 .tab-svg{display:block}
 .tab.active .tab-svg{stroke:#1D9E75}
 .tab:not(.active) .tab-svg{stroke:#8e8e93}
-
-/* alarm overlay */
 .alarm-overlay{display:none;position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.48);z-index:100;align-items:center;justify-content:center}
 .alarm-overlay.show{display:flex}
-.alarm-modal{background:#fff;border-radius:24px;padding:28px 24px;width:min(88vw, 300px);text-align:center}
-.alarm-chip{display:inline-block;font-size:12px;font-weight:600;padding:4px 13px;border-radius:20px;background:#E1F5EE;color:#085041;margin-bottom:12px}
-.alarm-title{font-size:22px;font-weight:700;color:#1c1c1e;margin-bottom:4px;letter-spacing:-0.3px}
-.alarm-sub{font-size:14px;color:#8e8e93;margin-bottom:18px}
-.alarm-profile-img{width:62px;height:62px;border-radius:50%;object-fit:cover;border:2px solid #E1F5EE;margin-bottom:12px}
+.alarm-modal{background:#fff;border-radius:24px;padding:28px 24px;width:min(88vw,300px);text-align:center}
 .countdown-ring{position:relative;width:84px;height:84px;margin:0 auto 20px}
 .countdown-ring svg{transform:rotate(-90deg)}
 .countdown-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:24px;font-weight:600;color:#1c1c1e}
 .alarm-yes{width:100%;padding:14px;background:#1D9E75;color:#fff;border:none;border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;margin-bottom:9px}
 .alarm-no{width:100%;padding:12px;background:transparent;color:#8e8e93;border:0.5px solid #c7c7cc;border-radius:14px;font-size:14px;cursor:pointer}
-
-/* toast */
 .toast{position:absolute;bottom:100px;left:50%;transform:translateX(-50%) translateY(8px);background:#1c1c1e;color:#fff;font-size:14px;padding:10px 20px;border-radius:22px;opacity:0;transition:all 0.25s;pointer-events:none;white-space:nowrap;z-index:200;font-weight:500}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.empty-hint{font-size:14px;color:#8e8e93;text-align:center;margin-top:48px;line-height:1.7}
 </style>
 </head>
 <body>
 <div id="app">
   <div class="status-bar">
-    <span class="status-time" id="clockEl"></span>
-    <span class="status-icons">●●▮</span>
+    <span style="font-size:14px;font-weight:500;color:#1c1c1e" id="clockEl"></span>
+    <span style="font-size:12px;color:#8e8e93">●●▮</span>
   </div>
-
-  <!-- 홈 -->
   <div class="screen active" id="screen-home">
     <div class="top-bar">
       <span class="app-name">약 먹었어?</span>
-      <button class="icon-btn" onclick="showTab('add')">+</button>
+      <button class="icon-btn" onclick="openAddForm()">+</button>
     </div>
     <div class="content">
       <div class="hero">
         <div class="profile-wrap" id="profileArea" onclick="document.getElementById('profileInput').click()">
-          <div class="profile-placeholder" id="profilePlaceholder">
+          <div id="profilePlaceholder" style="display:flex;flex-direction:column;align-items:center;gap:2px">
             <span style="font-size:22px;color:#c7c7cc">+</span>
             <span style="font-size:10px;color:#c7c7cc">사진</span>
           </div>
@@ -126,22 +92,21 @@ html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSyste
         </div>
         <input type="file" id="profileInput" accept="image/*" style="display:none" onchange="loadProfile(event)"/>
         <div class="rate-section">
-          <div class="rate-label" id="todayLabel"></div>
-          <div class="rate-value" id="todayRateLabel">오늘 이행률 —</div>
+          <div style="font-size:13px;color:#8e8e93;margin-bottom:2px" id="todayLabel"></div>
+          <div style="font-size:17px;font-weight:600;color:#1c1c1e;margin-bottom:8px" id="todayRateLabel">오늘 이행률 —</div>
           <div class="bar-bg"><div class="bar-fill" id="todayRateBar" style="width:0%"></div></div>
         </div>
       </div>
       <div id="med-list"></div>
     </div>
   </div>
-
-  <!-- 약 추가 -->
   <div class="screen" id="screen-add">
     <div class="top-bar">
       <button class="icon-btn" onclick="showTab('home')">←</button>
-      <span class="top-title">약 추가</span>
+      <span class="top-title" id="formTitle">약 추가</span>
     </div>
     <div class="add-form">
+      <input type="hidden" id="edit-id" value=""/>
       <label class="field-label">약 이름</label>
       <input class="field-input" id="inp-name" placeholder="예: 고혈압약, 종합비타민" autocomplete="off"/>
       <label class="field-label">복용 시간</label>
@@ -149,10 +114,9 @@ html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSyste
       <label class="field-label">복용 기간 (일)</label>
       <input class="field-input" id="inp-days" type="number" placeholder="30" min="1" max="365"/>
       <button class="save-btn" onclick="saveMed()">저장하기</button>
+      <button class="del-btn" id="del-btn" style="display:none" onclick="deleteMed()">이 약 삭제</button>
     </div>
   </div>
-
-  <!-- 기록 -->
   <div class="screen" id="screen-cal">
     <div class="top-bar">
       <span class="top-title">복약 기록</span>
@@ -160,19 +124,17 @@ html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSyste
     <div class="content">
       <div class="cal-grid" id="cal-heads"></div>
       <div class="cal-grid" id="cal-days"></div>
-      <div class="month-rate-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding:13px 16px;background:#f2f2f7;border-radius:14px">
         <span style="font-size:14px;color:#8e8e93">이번 달 복약률</span>
         <span style="font-size:22px;font-weight:700;color:#1D9E75" id="monthRateEl">—</span>
       </div>
-      <div class="legend">
-        <div class="legend-item"><div class="legend-dot" style="background:#E1F5EE"></div>완료</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#FCEBEB"></div>미복용</div>
-        <div class="legend-item"><div class="legend-dot" style="border:1.5px solid #1D9E75"></div>오늘</div>
+      <div style="display:flex;gap:14px;margin-top:12px">
+        <div style="display:flex;align-items:center;gap:5px"><div style="width:11px;height:11px;border-radius:3px;background:#E1F5EE"></div><span style="font-size:11px;color:#8e8e93">완료</span></div>
+        <div style="display:flex;align-items:center;gap:5px"><div style="width:11px;height:11px;border-radius:3px;background:#FCEBEB"></div><span style="font-size:11px;color:#8e8e93">미복용</span></div>
+        <div style="display:flex;align-items:center;gap:5px"><div style="width:11px;height:11px;border-radius:3px;border:1.5px solid #1D9E75"></div><span style="font-size:11px;color:#8e8e93">오늘</span></div>
       </div>
     </div>
   </div>
-
-  <!-- 탭바 -->
   <div class="tab-bar">
     <div class="tab-pill">
       <button class="tab active" id="tab-home" onclick="showTab('home')">
@@ -182,7 +144,7 @@ html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSyste
         </svg>
         <span class="tab-label">홈</span>
       </button>
-      <button class="tab" id="tab-add" onclick="showTab('add')">
+      <button class="tab" id="tab-add" onclick="openAddForm()">
         <svg class="tab-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round">
           <circle cx="12" cy="12" r="9"/>
           <line x1="12" y1="8" x2="12" y2="16"/>
@@ -203,19 +165,16 @@ html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSyste
       </button>
     </div>
   </div>
-
-  <!-- 알람 -->
   <div class="alarm-overlay" id="alarmOverlay">
     <div class="alarm-modal">
-      <img id="alarmProfileImg" class="alarm-profile-img" style="display:none"/>
-      <div class="alarm-chip" id="alarmMedName"></div>
-      <div class="alarm-title">약 먹었어?</div>
-      <div class="alarm-sub" id="alarmTimeLabel"></div>
+      <img id="alarmProfileImg" style="display:none;width:62px;height:62px;border-radius:50%;object-fit:cover;border:2px solid #E1F5EE;margin-bottom:12px"/>
+      <div style="display:inline-block;font-size:12px;font-weight:600;padding:4px 13px;border-radius:20px;background:#E1F5EE;color:#085041;margin-bottom:12px" id="alarmMedName"></div>
+      <div style="font-size:22px;font-weight:700;color:#1c1c1e;margin-bottom:4px">약 먹었어?</div>
+      <div style="font-size:14px;color:#8e8e93;margin-bottom:18px" id="alarmTimeLabel"></div>
       <div class="countdown-ring">
         <svg width="84" height="84" viewBox="0 0 84 84">
           <circle cx="42" cy="42" r="36" fill="none" stroke="#f2f2f7" stroke-width="5"/>
-          <circle id="ringCircle" cx="42" cy="42" r="36" fill="none" stroke="#1D9E75" stroke-width="5"
-            stroke-dasharray="226.2" stroke-dashoffset="0" stroke-linecap="round"/>
+          <circle id="ringCircle" cx="42" cy="42" r="36" fill="none" stroke="#1D9E75" stroke-width="5" stroke-dasharray="226.2" stroke-dashoffset="0" stroke-linecap="round"/>
         </svg>
         <div class="countdown-num" id="countdownNum">5:00</div>
       </div>
@@ -223,245 +182,110 @@ html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSyste
       <button class="alarm-no" onclick="snoozeAlarm()">5분 후 다시 알림</button>
     </div>
   </div>
-
   <div class="toast" id="toast"></div>
 </div>
-
 <script>
-const COLORS=['#1D9E75','#378ADD','#D85A30','#7F77DD','#BA7517'];
-const STORE_KEY='yak_data_v1';
-
-function loadData(){
-  try{const d=localStorage.getItem(STORE_KEY);return d?JSON.parse(d):null;}catch(e){return null;}
-}
-function saveData(){
-  try{
-    var data={meds:meds,history:history,nextId:nextId,profileSrc:profileSrc};
-    localStorage.setItem(STORE_KEY,JSON.stringify(data));
-    console.log('저장됨',data);
-  }catch(e){console.log('저장오류',e);}
-}
-
-let saved=loadData();
-let meds=saved&&saved.meds?saved.meds:[];
-let history=saved&&saved.history?saved.history:{};
-let nextId=saved&&saved.nextId?saved.nextId:1;
-let profileSrc=saved&&saved.profileSrc?saved.profileSrc:null;
-let cdInterval=null,cdSeconds=300,currentAlarmMed=null,alarmQueue=[];
-
-const today=new Date(),todayKey=today.toISOString().slice(0,10);
-function pad(n){return String(n).padStart(2,'0')}
-
-function initClock(){
-  const el=document.getElementById('clockEl');
-  function tick(){const n=new Date();el.textContent=pad(n.getHours())+':'+pad(n.getMinutes());}
-  tick();setInterval(tick,10000);
-}
-
-function todayStr(){
-  const d=['일','월','화','수','목','금','토'];
-  return (today.getMonth()+1)+'월 '+today.getDate()+'일 ('+d[today.getDay()]+')';
-}
-
+var KEY='yak_v3';
+function save(){try{localStorage.setItem(KEY,JSON.stringify({meds:meds,history:history,nextId:nextId,profileSrc:profileSrc}));}catch(e){}}
+function load(){try{var s=localStorage.getItem(KEY);return s?JSON.parse(s):{};} catch(e){return {};}}
+var saved=load();
+var meds=saved.meds||[];
+var history=saved.history||{};
+var nextId=saved.nextId||1;
+var profileSrc=saved.profileSrc||null;
+var cdInterval=null,cdSeconds=300,currentAlarmMed=null,alarmQueue=[];
+var COLORS=['#1D9E75','#378ADD','#D85A30','#7F77DD','#BA7517'];
+var today=new Date();
+var todayKey=today.getFullYear()+'-'+pad(today.getMonth()+1)+'-'+pad(today.getDate());
+function pad(n){return String(n).padStart(2,'0');}
+function initClock(){function tick(){var n=new Date();document.getElementById('clockEl').textContent=pad(n.getHours())+':'+pad(n.getMinutes());}tick();setInterval(tick,10000);}
+function todayStr(){var d=['일','월','화','수','목','금','토'];return (today.getMonth()+1)+'월 '+today.getDate()+'일 ('+d[today.getDay()]+')';}
 function getHistory(key){if(!history[key])history[key]={};return history[key];}
-
-function getTodayRate(){
-  const h=getHistory(todayKey);
-  if(!meds.length)return null;
-  return Math.round(meds.filter(m=>h[m.id]).length/meds.length*100);
-}
-
 function renderHome(){
   document.getElementById('todayLabel').textContent=todayStr();
-  const rate=getTodayRate();
-  const label=rate===null?'오늘 이행률 —':rate===100?'오늘 이행률 100% 🎉':'오늘 이행률 '+rate+'%';
-  document.getElementById('todayRateLabel').textContent=label;
+  var h=getHistory(todayKey);
+  var rate=meds.length===0?null:Math.round(meds.filter(function(m){return h[m.id];}).length/meds.length*100);
+  document.getElementById('todayRateLabel').textContent=rate===null?'오늘 이행률 —':rate===100?'오늘 이행률 100% 🎉':'오늘 이행률 '+rate+'%';
   document.getElementById('todayRateBar').style.width=(rate||0)+'%';
-  const h=getHistory(todayKey);
-  const list=document.getElementById('med-list');
-  if(!meds.length){
-    list.innerHTML='<p class="empty-hint">아직 등록된 약이 없어요.<br>아래 + 버튼을 눌러 약을 추가해보세요.</p>';
-    return;
+  var list=document.getElementById('med-list');
+  if(meds.length===0){list.innerHTML='<p class="empty-hint">아직 등록된 약이 없어요.<br>아래 + 버튼을 눌러 약을 추가해보세요.</p>';return;}
+  var html='';
+  for(var i=0;i<meds.length;i++){
+    var m=meds[i];var done=!!h[m.id];
+    html+='<div class="med-card">'
+      +'<div class="med-main" onclick="toggleMed('+m.id+')">'
+      +'<div style="width:10px;height:10px;border-radius:50%;background:'+m.color+';flex-shrink:0"></div>'
+      +'<div style="flex:1"><div style="font-size:15px;font-weight:500;color:#1c1c1e;text-decoration:'+(done?'line-through':'none')+';opacity:'+(done?0.38:1)+'">'+m.name+'</div>'
+      +'<div style="font-size:12px;color:#8e8e93;margin-top:2px">'+m.time+' 알람 설정됨</div></div></div>'
+      +'<button class="edit-btn" onclick="openEditForm('+m.id+')">✎</button>'
+      +'<div class="check-btn '+(done?'done':'')+'" onclick="toggleMed('+m.id+')">'+(done?'✓':'')+'</div>'
+      +'</div>';
   }
-  list.innerHTML=meds.map(m=>{
-    const done=!!h[m.id];
-    return `<div class="med-card" onclick="toggleMed(${m.id})">
-      <div class="med-dot" style="background:${m.color}"></div>
-      <div style="flex:1">
-        <div class="med-name ${done?'done':''}">${m.name}</div>
-        <div class="med-time-label">${m.time} 알람 설정됨</div>
-      </div>
-      <div class="check-btn ${done?'done':''}">${done?'✓':''}</div>
-    </div>`;
-  }).join('');
+  list.innerHTML=html;
 }
-
-function toggleMed(id){
-  const h=getHistory(todayKey);
-  if(h[id])delete h[id];
-  else{h[id]=true;showToast('복용 완료! 👍');}
-  saveData();renderHome();renderCal();
-}
-
-function showToast(msg){
-  const t=document.getElementById('toast');
-  t.textContent=msg;t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2300);
-}
-
-function loadProfile(e){
-  const file=e.target.files[0];if(!file)return;
-  const r=new FileReader();
-  r.onload=ev=>{
-    profileSrc=ev.target.result;
-    const img=document.getElementById('profileImg');
-    img.src=profileSrc;img.style.display='block';
-    document.getElementById('profilePlaceholder').style.display='none';
-    saveData();showToast('프로필 사진이 등록됐어요!');
-  };
-  r.readAsDataURL(file);
-}
-
-function applyProfile(){
-  if(!profileSrc)return;
-  const img=document.getElementById('profileImg');
-  img.src=profileSrc;img.style.display='block';
-  document.getElementById('profilePlaceholder').style.display='none';
-}
-
-function saveMed(){
-  const name=document.getElementById('inp-name').value.trim();
-  const time=document.getElementById('inp-time').value;
-  const days=parseInt(document.getElementById('inp-days').value)||30;
-  if(!name){document.getElementById('inp-name').focus();return;}
-  meds.push({id:nextId++,name,time,days,color:COLORS[meds.length%COLORS.length]});
+function toggleMed(id){var h=getHistory(todayKey);if(h[id])delete h[id];else{h[id]=true;showToast('복용 완료! 👍');}save();renderHome();renderCal();}
+function openAddForm(){
+  document.getElementById('formTitle').textContent='약 추가';
+  document.getElementById('edit-id').value='';
   document.getElementById('inp-name').value='';
+  document.getElementById('inp-time').value='09:00';
   document.getElementById('inp-days').value='';
-  saveData();scheduleAlarms();
-  showToast(name+' 추가됐어요!');
-  showTab('home');
+  document.getElementById('del-btn').style.display='none';
+  showTab('add');
 }
-
-function scheduleAlarms(){
-  meds.forEach(m=>{
-    const [h,min]=m.time.split(':').map(Number);
-    const now=new Date();
-    const target=new Date(now.getFullYear(),now.getMonth(),now.getDate(),h,min,0);
-    let diff=target-now;
-    if(diff<0)diff+=86400000;
-    setTimeout(()=>triggerAlarm(m),diff);
-  });
+function openEditForm(id){
+  var m=meds.find(function(x){return x.id===id;});
+  if(!m)return;
+  document.getElementById('formTitle').textContent='약 수정';
+  document.getElementById('edit-id').value=id;
+  document.getElementById('inp-name').value=m.name;
+  document.getElementById('inp-time').value=m.time;
+  document.getElementById('inp-days').value=m.days;
+  document.getElementById('del-btn').style.display='block';
+  showTab('add');
 }
-
-function triggerAlarm(med){
-  if(getHistory(todayKey)[med.id])return;
-  // 브라우저 알림 요청
-  if(Notification.permission==='granted'){
-    new Notification('약 먹었어?',{body:med.name+' 복용 시간이에요!',icon:'icon-192.png'});
+function saveMed(){
+  var name=document.getElementById('inp-name').value.trim();
+  var time=document.getElementById('inp-time').value;
+  var days=parseInt(document.getElementById('inp-days').value)||30;
+  var editId=document.getElementById('edit-id').value;
+  if(!name){document.getElementById('inp-name').focus();return;}
+  if(editId){
+    var id=parseInt(editId);
+    for(var i=0;i<meds.length;i++){if(meds[i].id===id){meds[i].name=name;meds[i].time=time;meds[i].days=days;break;}}
+    showToast(name+' 수정됐어요!');
+  }else{
+    meds.push({id:nextId++,name:name,time:time,days:days,color:COLORS[meds.length%COLORS.length]});
+    showToast(name+' 추가됐어요!');
   }
-  alarmQueue.push(med);
-  if(!document.getElementById('alarmOverlay').classList.contains('show'))showAlarmModal();
+  save();scheduleAlarms();showTab('home');
 }
-
-function showAlarmModal(){
-  if(!alarmQueue.length)return;
-  currentAlarmMed=alarmQueue.shift();
-  document.getElementById('alarmMedName').textContent=currentAlarmMed.name;
-  document.getElementById('alarmTimeLabel').textContent=currentAlarmMed.time+' 복용 시간이에요';
-  const alarmImg=document.getElementById('alarmProfileImg');
-  if(profileSrc){alarmImg.src=profileSrc;alarmImg.style.display='block';}
-  else alarmImg.style.display='none';
-  document.getElementById('alarmOverlay').classList.add('show');
-  startCountdown(300);
+function deleteMed(){
+  var editId=document.getElementById('edit-id').value;
+  if(!editId)return;
+  var id=parseInt(editId);
+  var m=meds.find(function(x){return x.id===id;});
+  if(!m)return;
+  if(!confirm('"'+m.name+'"을 삭제할까요?'))return;
+  meds=meds.filter(function(x){return x.id!==id;});
+  save();showToast('삭제됐어요');showTab('home');
 }
-
-function startCountdown(secs){
-  if(cdInterval)clearInterval(cdInterval);
-  cdSeconds=secs;updateRing();
-  cdInterval=setInterval(()=>{cdSeconds--;updateRing();if(cdSeconds<=0){clearInterval(cdInterval);missedAlarm();}},1000);
-}
-
-function updateRing(){
-  const circ=2*Math.PI*36,offset=circ*(1-cdSeconds/300);
-  const ring=document.getElementById('ringCircle');
-  ring.style.strokeDashoffset=offset;
-  ring.style.stroke=cdSeconds<=60?'#E24B4A':cdSeconds<=120?'#BA7517':'#1D9E75';
-  document.getElementById('countdownNum').textContent=Math.floor(cdSeconds/60)+':'+pad(cdSeconds%60);
-}
-
-function confirmTaken(){
-  clearInterval(cdInterval);
-  getHistory(todayKey)[currentAlarmMed.id]=true;
-  document.getElementById('alarmOverlay').classList.remove('show');
-  saveData();showToast('잘했어요! 오늘도 건강하게 💊');
-  renderHome();renderCal();
-  if(alarmQueue.length)setTimeout(showAlarmModal,600);
-}
-
-function snoozeAlarm(){
-  clearInterval(cdInterval);
-  document.getElementById('alarmOverlay').classList.remove('show');
-  showToast('5분 후 다시 알려드릴게요');
-  const med=currentAlarmMed;
-  setTimeout(()=>{alarmQueue.unshift(med);showAlarmModal();},300000);
-  if(alarmQueue.length)setTimeout(showAlarmModal,600);
-}
-
-function missedAlarm(){
-  document.getElementById('alarmOverlay').classList.remove('show');
-  showToast('지금이라도 드세요! 💊');
-  if(alarmQueue.length)setTimeout(showAlarmModal,600);
-}
-
-function renderCal(){
-  const year=today.getFullYear(),month=today.getMonth();
-  const firstDay=new Date(year,month,1).getDay();
-  const lastDate=new Date(year,month+1,0).getDate();
-  document.getElementById('cal-heads').innerHTML=
-    ['일','월','화','수','목','금','토'].map(d=>`<div class="cal-head">${d}</div>`).join('');
-  let cells='',done=0,counted=0;
-  for(let i=0;i<firstDay;i++)cells+=`<div class="cal-day empty"></div>`;
-  for(let d=1;d<=lastDate;d++){
-    const key=`${year}-${pad(month+1)}-${pad(d)}`;
-    const isToday=key===todayKey,isFuture=key>todayKey;
-    const h=history[key]||{};
-    let cls='cal-day';
-    if(isToday)cls+=' today';
-    else if(!isFuture&&meds.length){
-      if(meds.every(m=>h[m.id])){cls+=' done';done++;}
-      else if(Object.keys(h).length)cls+=' done';
-      else cls+=' miss';
-      counted++;
-    }
-    cells+=`<div class="${cls}">${d}</div>`;
-  }
-  document.getElementById('cal-days').innerHTML=cells;
-  document.getElementById('monthRateEl').textContent=counted>0?Math.round(done/counted*100)+'%':'—';
-}
-
-function showTab(name){
-  ['home','add','cal'].forEach(n=>{
-    document.getElementById('screen-'+n).classList.toggle('active',n===name);
-    document.getElementById('tab-'+n).classList.toggle('active',n===name);
-  });
-  if(name==='home')renderHome();
-  if(name==='cal')renderCal();
-}
-
-// 알림 권한 요청
-if('Notification' in window && Notification.permission==='default'){
-  setTimeout(()=>Notification.requestPermission(),2000);
-}
-
-// 서비스워커 등록
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('sw.js').catch(()=>{});
-}
-
-initClock();
-applyProfile();
-renderHome();
-scheduleAlarms();
+function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2300);}
+function loadProfile(e){var file=e.target.files[0];if(!file)return;var r=new FileReader();r.onload=function(ev){profileSrc=ev.target.result;document.getElementById('profileImg').src=profileSrc;document.getElementById('profileImg').style.display='block';document.getElementById('profilePlaceholder').style.display='none';save();showToast('프로필 사진이 등록됐어요!');};r.readAsDataURL(file);}
+function applyProfile(){if(!profileSrc)return;document.getElementById('profileImg').src=profileSrc;document.getElementById('profileImg').style.display='block';document.getElementById('profilePlaceholder').style.display='none';}
+function scheduleAlarms(){for(var i=0;i<meds.length;i++){(function(m){var parts=m.time.split(':');var h=parseInt(parts[0]),mn=parseInt(parts[1]);var now=new Date();var target=new Date(now.getFullYear(),now.getMonth(),now.getDate(),h,mn,0);var diff=target-now;if(diff<0)diff+=86400000;setTimeout(function(){triggerAlarm(m);},diff);})(meds[i]);}}
+function triggerAlarm(med){if(getHistory(todayKey)[med.id])return;if(typeof Notification!=='undefined'&&Notification.permission==='granted')new Notification('약 먹었어?',{body:med.name+' 복용 시간이에요!',icon:'icon-192.png'});alarmQueue.push(med);if(!document.getElementById('alarmOverlay').classList.contains('show'))showAlarmModal();}
+function showAlarmModal(){if(!alarmQueue.length)return;currentAlarmMed=alarmQueue.shift();document.getElementById('alarmMedName').textContent=currentAlarmMed.name;document.getElementById('alarmTimeLabel').textContent=currentAlarmMed.time+' 복용 시간이에요';var ai=document.getElementById('alarmProfileImg');if(profileSrc){ai.src=profileSrc;ai.style.display='block';}else{ai.style.display='none';}document.getElementById('alarmOverlay').classList.add('show');startCountdown(300);}
+function startCountdown(secs){if(cdInterval)clearInterval(cdInterval);cdSeconds=secs;updateRing();cdInterval=setInterval(function(){cdSeconds--;updateRing();if(cdSeconds<=0){clearInterval(cdInterval);missedAlarm();}},1000);}
+function updateRing(){var circ=2*Math.PI*36,offset=circ*(1-cdSeconds/300);var ring=document.getElementById('ringCircle');ring.style.strokeDashoffset=offset;ring.style.stroke=cdSeconds<=60?'#E24B4A':cdSeconds<=120?'#BA7517':'#1D9E75';document.getElementById('countdownNum').textContent=Math.floor(cdSeconds/60)+':'+pad(cdSeconds%60);}
+function confirmTaken(){clearInterval(cdInterval);getHistory(todayKey)[currentAlarmMed.id]=true;document.getElementById('alarmOverlay').classList.remove('show');save();showToast('잘했어요! 오늘도 건강하게 💊');renderHome();renderCal();if(alarmQueue.length)setTimeout(showAlarmModal,600);}
+function snoozeAlarm(){clearInterval(cdInterval);document.getElementById('alarmOverlay').classList.remove('show');showToast('5분 후 다시 알려드릴게요');var med=currentAlarmMed;setTimeout(function(){alarmQueue.unshift(med);showAlarmModal();},300000);if(alarmQueue.length)setTimeout(showAlarmModal,600);}
+function missedAlarm(){document.getElementById('alarmOverlay').classList.remove('show');showToast('지금이라도 드세요! 💊');if(alarmQueue.length)setTimeout(showAlarmModal,600);}
+function renderCal(){var year=today.getFullYear(),month=today.getMonth();var firstDay=new Date(year,month,1).getDay();var lastDate=new Date(year,month+1,0).getDate();var headHtml='';['일','월','화','수','목','금','토'].forEach(function(d){headHtml+='<div class="cal-head">'+d+'</div>';});document.getElementById('cal-heads').innerHTML=headHtml;var cells='',done=0,counted=0;for(var i=0;i<firstDay;i++)cells+='<div class="cal-day empty"></div>';for(var d=1;d<=lastDate;d++){var key=year+'-'+pad(month+1)+'-'+pad(d);var isToday=key===todayKey,isFuture=key>todayKey;var h=history[key]||{};var cls='cal-day';if(isToday)cls+=' today';else if(!isFuture&&meds.length){if(meds.every(function(m){return h[m.id];})){cls+=' done';done++;}else cls+=' miss';counted++;}cells+='<div class="'+cls+'">'+d+'</div>';}document.getElementById('cal-days').innerHTML=cells;document.getElementById('monthRateEl').textContent=counted>0?Math.round(done/counted*100)+'%':'—';}
+function showTab(name){['home','add','cal'].forEach(function(n){document.getElementById('screen-'+n).classList.toggle('active',n===name);document.getElementById('tab-'+n).classList.toggle('active',n===name);});if(name==='home')renderHome();if(name==='cal')renderCal();}
+if(typeof Notification!=='undefined'&&Notification.permission==='default')setTimeout(function(){Notification.requestPermission();},2000);
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){});
+initClock();applyProfile();renderHome();scheduleAlarms();
 </script>
 </body>
 </html>
