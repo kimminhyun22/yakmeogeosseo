@@ -235,14 +235,18 @@ function loadData(){
   try{const d=localStorage.getItem(STORE_KEY);return d?JSON.parse(d):null;}catch(e){return null;}
 }
 function saveData(){
-  try{localStorage.setItem(STORE_KEY,JSON.stringify({meds,history,nextId,profileSrc}));}catch(e){}
+  try{
+    var data={meds:meds,history:history,nextId:nextId,profileSrc:profileSrc};
+    localStorage.setItem(STORE_KEY,JSON.stringify(data));
+    console.log('저장됨',data);
+  }catch(e){console.log('저장오류',e);}
 }
 
 let saved=loadData();
-let meds=saved?.meds||[];
-let history=saved?.history||{};
-let nextId=saved?.nextId||1;
-let profileSrc=saved?.profileSrc||null;
+let meds=saved&&saved.meds?saved.meds:[];
+let history=saved&&saved.history?saved.history:{};
+let nextId=saved&&saved.nextId?saved.nextId:1;
+let profileSrc=saved&&saved.profileSrc?saved.profileSrc:null;
 let cdInterval=null,cdSeconds=300,currentAlarmMed=null,alarmQueue=[];
 
 const today=new Date(),todayKey=today.toISOString().slice(0,10);
