@@ -15,66 +15,70 @@
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif}
 #app{max-width:430px;margin:0 auto;height:100%;display:flex;flex-direction:column;background:#fff;position:relative;overflow:hidden}
-.status-bar{padding-top:max(env(safe-area-inset-top),14px);padding-left:20px;padding-right:20px;padding-bottom:6px;display:flex;justify-content:space-between;align-items:center;background:#fff}
+.status-bar{padding-top:max(env(safe-area-inset-top),14px);padding-left:22px;padding-right:22px;padding-bottom:6px;display:flex;justify-content:space-between;align-items:center;background:#fff}
 .screen{flex:1;display:none;flex-direction:column;overflow:hidden}
 .screen.active{display:flex}
-.top-bar{padding:8px 20px 6px;display:flex;align-items:center;gap:10px;background:#fff}
-.app-name{font-size:22px;font-weight:600;color:#1c1c1e;flex:1;letter-spacing:-0.3px}
-.top-title{font-size:18px;font-weight:600;color:#1c1c1e;flex:1}
-.icon-btn{width:34px;height:34px;border-radius:50%;background:#f2f2f7;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#8e8e93;font-size:18px}
-.content{flex:1;padding:8px 20px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch}
-.hero{display:flex;align-items:center;gap:14px;margin-bottom:20px}
-.profile-wrap{width:80px;height:80px;border-radius:50%;border:1.5px dashed #c7c7cc;display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;flex-shrink:0;background:#f2f2f7}
+.top-bar{padding:10px 22px 8px;display:flex;align-items:center;gap:10px;background:#fff}
+.app-name{font-size:26px;font-weight:700;color:#1c1c1e;flex:1;letter-spacing:-0.5px}
+.top-title{font-size:20px;font-weight:700;color:#1c1c1e;flex:1}
+.icon-btn{width:38px;height:38px;border-radius:50%;background:#f2f2f7;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#8e8e93;font-size:22px}
+.content{flex:1;padding:8px 22px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.hero{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.profile-wrap{width:96px;height:96px;border-radius:50%;border:2px dashed #c7c7cc;display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;flex-shrink:0;background:#f2f2f7}
 .profile-wrap img{width:100%;height:100%;object-fit:cover}
 .rate-section{flex:1}
-.bar-bg{width:100%;height:7px;background:#f2f2f7;border-radius:20px;overflow:hidden}
+.bar-bg{width:100%;height:9px;background:#f2f2f7;border-radius:20px;overflow:hidden}
 .bar-fill{height:100%;border-radius:20px;background:#1D9E75;transition:width 0.45s}
-.med-card{background:#fff;border:0.5px solid #e5e5ea;border-radius:16px;padding:14px 16px;margin-bottom:10px;display:flex;align-items:center;gap:12px;-webkit-user-select:none}
+.quote-box{background:#f2f2f7;border-radius:14px;padding:14px 16px;margin-bottom:16px}
+.quote-text{font-size:15px;color:#3a3a3c;line-height:1.65;font-style:italic}
+.quote-src{font-size:12px;color:#8e8e93;margin-top:6px;text-align:right}
+.med-card{background:#fff;border:0.5px solid #e5e5ea;border-radius:18px;padding:18px;margin-bottom:12px;display:flex;align-items:center;gap:14px;-webkit-user-select:none}
 .med-card:active{background:#f2f2f7}
-.med-main{flex:1;cursor:pointer;display:flex;align-items:center;gap:12px}
-.edit-btn{width:32px;height:32px;border-radius:50%;background:#f2f2f7;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
-.check-btn{width:28px;height:28px;border-radius:50%;border:1.5px solid #c7c7cc;background:transparent;display:flex;align-items:center;justify-content:center;font-size:13px;color:#8e8e93;flex-shrink:0;cursor:pointer}
+.med-main{flex:1;cursor:pointer;display:flex;align-items:center;gap:14px}
+.med-dot{width:14px;height:14px;border-radius:50%;flex-shrink:0}
+.edit-btn{width:36px;height:36px;border-radius:50%;background:#f2f2f7;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
+.check-btn{width:34px;height:34px;border-radius:50%;border:2px solid #c7c7cc;background:transparent;display:flex;align-items:center;justify-content:center;font-size:16px;color:#8e8e93;flex-shrink:0;cursor:pointer}
 .check-btn.done{background:#1D9E75;border-color:#1D9E75;color:#fff}
-.add-form{padding:4px 20px 20px}
-.field-label{font-size:13px;color:#8e8e93;margin-bottom:6px;margin-top:18px;display:block}
-.field-input{width:100%;padding:12px 14px;border:0.5px solid #c7c7cc;border-radius:12px;font-size:16px;background:#fff;color:#1c1c1e;outline:none;-webkit-appearance:none;font-family:inherit}
+.add-form{padding:4px 22px 20px}
+.field-label{font-size:15px;color:#8e8e93;margin-bottom:8px;margin-top:20px;display:block;font-weight:500}
+.field-input{width:100%;padding:14px 16px;border:0.5px solid #c7c7cc;border-radius:14px;font-size:18px;background:#fff;color:#1c1c1e;outline:none;-webkit-appearance:none;font-family:inherit}
 .field-input:focus{border-color:#1D9E75}
-.save-btn{width:100%;margin-top:22px;padding:15px;background:#1D9E75;color:#fff;border:none;border-radius:14px;font-size:16px;font-weight:600;cursor:pointer}
-.del-btn{width:100%;margin-top:10px;padding:15px;background:transparent;color:#E24B4A;border:0.5px solid #E24B4A;border-radius:14px;font-size:16px;font-weight:600;cursor:pointer}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:6px}
-.cal-head{font-size:11px;color:#8e8e93;text-align:center;padding:4px 0;font-weight:500}
-.cal-day{height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#8e8e93}
-.cal-day.done{background:#E1F5EE;color:#085041;font-weight:500}
+.save-btn{width:100%;margin-top:24px;padding:17px;background:#1D9E75;color:#fff;border:none;border-radius:16px;font-size:18px;font-weight:700;cursor:pointer}
+.del-btn{width:100%;margin-top:12px;padding:17px;background:transparent;color:#E24B4A;border:0.5px solid #E24B4A;border-radius:16px;font-size:18px;font-weight:600;cursor:pointer}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:8px}
+.cal-head{font-size:13px;color:#8e8e93;text-align:center;padding:5px 0;font-weight:600}
+.cal-day{height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:14px;color:#8e8e93}
+.cal-day.done{background:#E1F5EE;color:#085041;font-weight:600}
 .cal-day.miss{background:#FCEBEB;color:#A32D2D}
-.cal-day.today{border:1.5px solid #1D9E75;color:#1D9E75;font-weight:600}
+.cal-day.today{border:2px solid #1D9E75;color:#1D9E75;font-weight:700}
 .cal-day.empty{opacity:0}
-.tab-bar{padding:8px 16px;padding-bottom:max(env(safe-area-inset-bottom),12px);background:#fff}
-.tab-pill{display:flex;background:#f2f2f7;border-radius:22px;padding:4px;gap:2px}
-.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border:none;background:transparent;padding:8px 4px;border-radius:18px;transition:background 0.2s}
+.tab-bar{padding:8px 16px;padding-bottom:max(env(safe-area-inset-bottom),14px);background:#fff}
+.tab-pill{display:flex;background:#f2f2f7;border-radius:24px;padding:5px;gap:2px}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;border:none;background:transparent;padding:10px 4px;border-radius:20px;transition:background 0.2s}
 .tab.active{background:#fff}
-.tab-label{font-size:10px;color:#8e8e93;font-weight:400}
-.tab.active .tab-label{color:#1D9E75;font-weight:600}
+.tab-label{font-size:11px;color:#8e8e93;font-weight:400}
+.tab.active .tab-label{color:#1D9E75;font-weight:700}
 .tab-svg{display:block}
 .tab.active .tab-svg{stroke:#1D9E75}
 .tab:not(.active) .tab-svg{stroke:#8e8e93}
-.alarm-overlay{display:none;position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.48);z-index:100;align-items:center;justify-content:center}
+.alarm-overlay{display:none;position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.52);z-index:100;align-items:center;justify-content:center}
 .alarm-overlay.show{display:flex}
-.alarm-modal{background:#fff;border-radius:24px;padding:28px 24px;width:min(88vw,300px);text-align:center}
-.countdown-ring{position:relative;width:84px;height:84px;margin:0 auto 20px}
+.alarm-modal{background:#fff;border-radius:28px;padding:32px 26px;width:min(88vw,320px);text-align:center}
+.countdown-ring{position:relative;width:100px;height:100px;margin:0 auto 22px}
 .countdown-ring svg{transform:rotate(-90deg)}
-.countdown-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:24px;font-weight:600;color:#1c1c1e}
-.alarm-yes{width:100%;padding:14px;background:#1D9E75;color:#fff;border:none;border-radius:14px;font-size:16px;font-weight:600;cursor:pointer;margin-bottom:9px}
-.alarm-no{width:100%;padding:12px;background:transparent;color:#8e8e93;border:0.5px solid #c7c7cc;border-radius:14px;font-size:14px;cursor:pointer}
-.toast{position:absolute;bottom:100px;left:50%;transform:translateX(-50%) translateY(8px);background:#1c1c1e;color:#fff;font-size:14px;padding:10px 20px;border-radius:22px;opacity:0;transition:all 0.25s;pointer-events:none;white-space:nowrap;z-index:200;font-weight:500}
+.countdown-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:28px;font-weight:700;color:#1c1c1e}
+.alarm-yes{width:100%;padding:16px;background:#1D9E75;color:#fff;border:none;border-radius:16px;font-size:18px;font-weight:700;cursor:pointer;margin-bottom:10px}
+.alarm-no{width:100%;padding:14px;background:transparent;color:#8e8e93;border:0.5px solid #c7c7cc;border-radius:16px;font-size:16px;cursor:pointer}
+.toast{position:absolute;bottom:110px;left:50%;transform:translateX(-50%) translateY(8px);background:#1c1c1e;color:#fff;font-size:15px;padding:12px 22px;border-radius:24px;opacity:0;transition:all 0.25s;pointer-events:none;white-space:nowrap;z-index:200;font-weight:500}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.empty-hint{font-size:14px;color:#8e8e93;text-align:center;margin-top:48px;line-height:1.7}
+.empty-hint{font-size:16px;color:#8e8e93;text-align:center;margin-top:48px;line-height:1.8}
 </style>
 </head>
 <body>
 <div id="app">
   <div class="status-bar">
-    <span style="font-size:14px;font-weight:500;color:#1c1c1e" id="clockEl"></span>
-    <span style="font-size:12px;color:#8e8e93">●●▮</span>
+    <span style="font-size:15px;font-weight:600;color:#1c1c1e" id="clockEl"></span>
+    <span style="font-size:13px;color:#8e8e93">●●▮</span>
   </div>
   <div class="screen active" id="screen-home">
     <div class="top-bar">
@@ -84,18 +88,22 @@ html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSyste
     <div class="content">
       <div class="hero">
         <div class="profile-wrap" id="profileArea" onclick="document.getElementById('profileInput').click()">
-          <div id="profilePlaceholder" style="display:flex;flex-direction:column;align-items:center;gap:2px">
-            <span style="font-size:22px;color:#c7c7cc">+</span>
-            <span style="font-size:10px;color:#c7c7cc">사진</span>
+          <div id="profilePlaceholder" style="display:flex;flex-direction:column;align-items:center;gap:3px">
+            <span style="font-size:28px;color:#c7c7cc">+</span>
+            <span style="font-size:11px;color:#c7c7cc">사진</span>
           </div>
           <img id="profileImg" style="display:none"/>
         </div>
         <input type="file" id="profileInput" accept="image/*" style="display:none" onchange="loadProfile(event)"/>
         <div class="rate-section">
-          <div style="font-size:13px;color:#8e8e93;margin-bottom:2px" id="todayLabel"></div>
-          <div style="font-size:17px;font-weight:600;color:#1c1c1e;margin-bottom:8px" id="todayRateLabel">오늘 이행률 —</div>
+          <div style="font-size:14px;color:#8e8e93;margin-bottom:4px" id="todayLabel"></div>
+          <div style="font-size:20px;font-weight:700;color:#1c1c1e;margin-bottom:10px;line-height:1.2" id="todayRateLabel">오늘 이행률 —</div>
           <div class="bar-bg"><div class="bar-fill" id="todayRateBar" style="width:0%"></div></div>
         </div>
+      </div>
+      <div class="quote-box">
+        <div class="quote-text" id="quoteText"></div>
+        <div class="quote-src" id="quoteSrc"></div>
       </div>
       <div id="med-list"></div>
     </div>
@@ -108,7 +116,7 @@ html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSyste
     <div class="add-form">
       <input type="hidden" id="edit-id" value=""/>
       <label class="field-label">약 이름</label>
-      <input class="field-input" id="inp-name" placeholder="예: 고혈압약, 종합비타민" autocomplete="off"/>
+      <input class="field-input" id="inp-name" placeholder="예: 고혈압약" autocomplete="off"/>
       <label class="field-label">복용 시간</label>
       <input class="field-input" id="inp-time" type="time" value="09:00"/>
       <label class="field-label">복용 기간 (일)</label>
@@ -118,63 +126,47 @@ html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSyste
     </div>
   </div>
   <div class="screen" id="screen-cal">
-    <div class="top-bar">
-      <span class="top-title">복약 기록</span>
-    </div>
+    <div class="top-bar"><span class="top-title">복약 기록</span></div>
     <div class="content">
       <div class="cal-grid" id="cal-heads"></div>
       <div class="cal-grid" id="cal-days"></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding:13px 16px;background:#f2f2f7;border-radius:14px">
-        <span style="font-size:14px;color:#8e8e93">이번 달 복약률</span>
-        <span style="font-size:22px;font-weight:700;color:#1D9E75" id="monthRateEl">—</span>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding:16px 18px;background:#f2f2f7;border-radius:16px">
+        <span style="font-size:16px;color:#8e8e93;font-weight:500">이번 달 복약률</span>
+        <span style="font-size:26px;font-weight:700;color:#1D9E75" id="monthRateEl">—</span>
       </div>
-      <div style="display:flex;gap:14px;margin-top:12px">
-        <div style="display:flex;align-items:center;gap:5px"><div style="width:11px;height:11px;border-radius:3px;background:#E1F5EE"></div><span style="font-size:11px;color:#8e8e93">완료</span></div>
-        <div style="display:flex;align-items:center;gap:5px"><div style="width:11px;height:11px;border-radius:3px;background:#FCEBEB"></div><span style="font-size:11px;color:#8e8e93">미복용</span></div>
-        <div style="display:flex;align-items:center;gap:5px"><div style="width:11px;height:11px;border-radius:3px;border:1.5px solid #1D9E75"></div><span style="font-size:11px;color:#8e8e93">오늘</span></div>
+      <div style="display:flex;gap:16px;margin-top:14px">
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:13px;height:13px;border-radius:3px;background:#E1F5EE"></div><span style="font-size:13px;color:#8e8e93">완료</span></div>
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:13px;height:13px;border-radius:3px;background:#FCEBEB"></div><span style="font-size:13px;color:#8e8e93">미복용</span></div>
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:13px;height:13px;border-radius:3px;border:2px solid #1D9E75"></div><span style="font-size:13px;color:#8e8e93">오늘</span></div>
       </div>
     </div>
   </div>
   <div class="tab-bar">
     <div class="tab-pill">
       <button class="tab active" id="tab-home" onclick="showTab('home')">
-        <svg class="tab-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
-          <path d="M9 21V12h6v9"/>
-        </svg>
+        <svg class="tab-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
         <span class="tab-label">홈</span>
       </button>
       <button class="tab" id="tab-add" onclick="openAddForm()">
-        <svg class="tab-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round">
-          <circle cx="12" cy="12" r="9"/>
-          <line x1="12" y1="8" x2="12" y2="16"/>
-          <line x1="8" y1="12" x2="16" y2="12"/>
-        </svg>
+        <svg class="tab-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
         <span class="tab-label">약 추가</span>
       </button>
       <button class="tab" id="tab-cal" onclick="showTab('cal')">
-        <svg class="tab-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="4" width="18" height="18" rx="3"/>
-          <line x1="3" y1="9" x2="21" y2="9"/>
-          <line x1="8" y1="2" x2="8" y2="6"/>
-          <line x1="16" y1="2" x2="16" y2="6"/>
-          <rect x="7" y="13" width="3" height="3" rx="0.5"/>
-          <rect x="14" y="13" width="3" height="3" rx="0.5"/>
-        </svg>
+        <svg class="tab-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><rect x="7" y="13" width="3" height="3" rx="0.5"/><rect x="14" y="13" width="3" height="3" rx="0.5"/></svg>
         <span class="tab-label">기록</span>
       </button>
     </div>
   </div>
   <div class="alarm-overlay" id="alarmOverlay">
     <div class="alarm-modal">
-      <img id="alarmProfileImg" style="display:none;width:62px;height:62px;border-radius:50%;object-fit:cover;border:2px solid #E1F5EE;margin-bottom:12px"/>
-      <div style="display:inline-block;font-size:12px;font-weight:600;padding:4px 13px;border-radius:20px;background:#E1F5EE;color:#085041;margin-bottom:12px" id="alarmMedName"></div>
-      <div style="font-size:22px;font-weight:700;color:#1c1c1e;margin-bottom:4px">약 먹었어?</div>
-      <div style="font-size:14px;color:#8e8e93;margin-bottom:18px" id="alarmTimeLabel"></div>
+      <img id="alarmProfileImg" style="display:none;width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid #E1F5EE;margin-bottom:14px"/>
+      <div style="display:inline-block;font-size:13px;font-weight:700;padding:5px 15px;border-radius:20px;background:#E1F5EE;color:#085041;margin-bottom:14px" id="alarmMedName"></div>
+      <div style="font-size:26px;font-weight:700;color:#1c1c1e;margin-bottom:5px">약 먹었어?</div>
+      <div style="font-size:15px;color:#8e8e93;margin-bottom:20px" id="alarmTimeLabel"></div>
       <div class="countdown-ring">
-        <svg width="84" height="84" viewBox="0 0 84 84">
-          <circle cx="42" cy="42" r="36" fill="none" stroke="#f2f2f7" stroke-width="5"/>
-          <circle id="ringCircle" cx="42" cy="42" r="36" fill="none" stroke="#1D9E75" stroke-width="5" stroke-dasharray="226.2" stroke-dashoffset="0" stroke-linecap="round"/>
+        <svg width="100" height="100" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="43" fill="none" stroke="#f2f2f7" stroke-width="6"/>
+          <circle id="ringCircle" cx="50" cy="50" r="43" fill="none" stroke="#1D9E75" stroke-width="6" stroke-dasharray="270.2" stroke-dashoffset="0" stroke-linecap="round"/>
         </svg>
         <div class="countdown-num" id="countdownNum">5:00</div>
       </div>
@@ -185,9 +177,10 @@ html,body{height:100%;background:#f5f5f7;font-family:-apple-system,BlinkMacSyste
   <div class="toast" id="toast"></div>
 </div>
 <script>
-var KEY='yak_v3';
-function save(){try{localStorage.setItem(KEY,JSON.stringify({meds:meds,history:history,nextId:nextId,profileSrc:profileSrc}));}catch(e){}}
-function load(){try{var s=localStorage.getItem(KEY);return s?JSON.parse(s):{};} catch(e){return {};}}
+var KEY='yak_v4';
+var QUOTES=[["건강은 모든 것이 아니지만, 건강 없이는 모든 것이 아무것도 아니다.","쇼펜하우어"],["약을 제때 먹는 것이 최고의 의사다.","속담"],["건강한 몸에 건강한 정신이 깃든다.","유베날리스"],["오늘의 습관이 내일의 건강을 만든다.","격언"],["예방이 치료보다 낫다.","데시데리우스 에라스무스"],["규칙적인 생활이 최고의 보약이다.","동양 격언"],["몸이 보내는 신호에 귀 기울여라.","히포크라테스"],["작은 실천이 큰 건강을 만든다.","격언"],["자신을 사랑하는 것은 건강을 지키는 것에서 시작된다.","격언"],["천 리 길도 한 걸음부터, 건강도 오늘 하루부터.","속담"],["충분한 수면은 최고의 투자다.","격언"],["물을 충분히 마시는 것은 몸을 청소하는 일이다.","격언"],["걷는 것은 최고의 약이다.","히포크라테스"],["웃음은 최고의 명약이다.","속담"],["스트레스를 다스리는 자가 건강을 다스린다.","격언"],["식사는 즐겁게, 약은 제때에.","격언"],["건강을 잃으면 모든 것을 잃는다.","서양 격언"],["꾸준함이 재능을 이긴다, 건강도 마찬가지다.","격언"],["마음이 평온하면 몸도 건강하다.","동양 격언"],["오늘 먹는 약 한 알이 내일을 지킨다.","격언"],["음식으로 고치지 못하는 병은 약으로도 고치지 못한다.","히포크라테스"],["건강은 최대의 선물이고 만족은 최대의 재산이다.","부처"],["몸을 돌보지 않으면 살 곳이 없어진다.","격언"],["건강이란 삶의 속도를 조절하는 능력이다.","격언"],["좋은 의사는 병을 고치고, 더 좋은 의사는 병을 예방한다.","격언"],["규칙적인 복약은 치료의 반이다.","의학 격언"],["매일 조금씩 더 건강해지고 있다.","긍정 격언"],["자신의 건강을 최우선으로 하라.","격언"],["건강한 생활 습관은 가장 값진 유산이다.","격언"],["오늘 하루도 건강하게 보내는 것이 최고의 성공이다.","격언"],["몸은 우리가 사는 집이다, 잘 관리하라.","격언"],["지금 이 순간 건강을 챙기는 것이 미래를 여는 열쇠다.","격언"],["약을 거르지 않는 것이 최고의 치료다.","의학 격언"],["건강은 투자다, 지금 당장 시작하라.","격언"],["몸이 보내는 메시지를 무시하지 마라.","격언"],["작은 불편함을 참는 것이 큰 병을 부른다.","속담"],["건강을 유지하는 것은 자신에 대한 의무다.","격언"],["매일 약을 챙기는 것은 자신을 사랑하는 방법이다.","격언"],["건강은 서서히 무너지고, 갑자기 소중해진다.","격언"],["오늘의 노력이 10년 후의 나를 만든다.","격언"],["긍정적인 마음이 면역력을 높인다.","의학 연구"],["감사하는 마음이 건강의 시작이다.","격언"],["숨을 깊이 쉬어라, 그것이 가장 쉬운 치료다.","격언"],["자연과 함께하는 시간이 몸을 치유한다.","격언"],["균형 잡힌 식단이 균형 잡힌 삶을 만든다.","격언"],["하루 30분의 운동이 하루를 바꾼다.","격언"],["좋은 습관은 천천히 쌓이고, 강력하게 작용한다.","격언"],["건강한 노년은 젊은 날의 선택에서 온다.","격언"],["오늘도 약을 챙긴 당신, 정말 잘했어요.","격언"],["지금 이 순간에도 몸은 당신을 위해 일하고 있다.","격언"],["충분한 휴식은 과로보다 더 많은 것을 이룬다.","격언"],["혈압을 재는 습관이 뇌졸중을 예방한다.","의학 상식"],["당뇨 관리의 핵심은 꾸준함이다.","의학 상식"],["콜레스테롤 관리는 심장을 지키는 일이다.","의학 상식"],["정기 검진은 가장 현명한 건강 투자다.","격언"],["약의 효과는 꾸준히 먹을 때 나타난다.","의학 상식"],["임의로 약을 끊으면 더 큰 위험이 온다.","의학 상식"],["좋은 수면이 모든 치유의 기반이다.","의학 연구"],["스트레스는 만병의 근원이다.","의학 상식"],["혈당을 안정시키는 것이 노화를 늦춘다.","의학 연구"],["심장 건강을 지키면 뇌 건강도 지킨다.","의학 연구"],["규칙적인 식사가 혈당을 안정시킨다.","의학 상식"],["금연은 어떤 약보다 강력한 치료다.","의학 상식"],["과음은 간을 혹사시키는 지름길이다.","의학 상식"],["계단을 오르는 것이 최고의 심장 운동이다.","의학 연구"],["채소를 먹는 것이 항산화의 시작이다.","영양학"],["생선의 오메가3는 혈관을 청소한다.","영양학"],["견과류 한 줌이 심장을 지킨다.","영양학"],["나트륨을 줄이면 혈압이 내려간다.","의학 상식"],["설탕을 줄이면 몸이 가벼워진다.","영양학"],["물 한 잔이 피로를 반으로 줄인다.","의학 상식"],["나이는 숫자일 뿐, 건강은 선택이다.","격언"],["몸을 움직이는 한 청춘이다.","격언"],["노년의 활력은 젊은 날의 습관에서 온다.","격언"],["백 세 시대, 건강 관리가 곧 행복이다.","격언"],["아프기 전에 관리하는 것이 진짜 지혜다.","격언"],["의사의 말을 잘 따르는 것이 최고의 치료다.","격언"],["처방을 제대로 따르면 반은 나은 것이다.","의학 격언"],["작은 통증을 무시하면 큰 병이 된다.","속담"],["건강 검진은 몸의 성적표다.","격언"],["지금 건강을 지키는 것이 미래의 나를 구한다.","격언"],["사랑하는 사람을 위해서라도 건강하라.","격언"],["건강한 내가 가족의 행복이다.","격언"],["나를 돌보는 것이 남을 돌보는 시작이다.","격언"],["오늘 하루 건강하게 지낸 것에 감사하라.","격언"],["약을 먹는 것은 자신을 포기하지 않는 것이다.","격언"],["치료를 포기하지 않는 한 희망이 있다.","격언"],["꾸준함이 기적을 만든다.","격언"],["매일의 작은 선택이 인생을 바꾼다.","격언"],["건강이 재산이다.","서양 속담"],["내 몸의 주인은 나다.","격언"],["오늘도 최선을 다해 건강을 지키자.","격언"],["건강한 습관은 최고의 유산이다.","격언"],["몸이 편안해야 마음도 편안하다.","격언"],["기쁨이 있는 곳에 건강이 있다.","격언"],["마음을 다스리면 몸도 다스려진다.","동양 격언"],["욕심을 버리면 건강이 온다.","동양 격언"],["일찍 자고 일찍 일어나는 것이 건강의 비결이다.","격언"],["과식은 만병의 어머니다.","서양 속담"],["소식이 장수의 비결이다.","동양 격언"],["천천히 씹어 먹는 것이 위장을 살린다.","의학 상식"],["규칙적인 배변이 장 건강의 척도다.","의학 상식"],["장이 건강해야 면역력이 높아진다.","의학 연구"],["발효 식품이 장내 세균을 살린다.","영양학"],["식이섬유가 혈당과 혈압을 낮춘다.","영양학"],["녹차 한 잔이 세포를 보호한다.","영양학"],["술은 백약의 으뜸이지만 과하면 독이다.","속담"],["담배는 건강의 가장 큰 적이다.","의학 상식"],["음악이 스트레스를 줄인다.","의학 연구"],["독서가 뇌를 젊게 유지한다.","의학 연구"],["사회적 유대가 수명을 늘린다.","의학 연구"],["외로움은 흡연만큼 건강에 해롭다.","의학 연구"],["친구와 나누는 대화가 치유가 된다.","격언"],["봉사와 나눔이 행복 호르몬을 높인다.","의학 연구"],["새로운 것을 배우는 것이 뇌를 건강하게 한다.","의학 연구"],["취미 생활이 스트레스를 해소한다.","격언"],["좋아하는 일을 하면 건강해진다.","격언"],["일과 휴식의 균형이 번아웃을 막는다.","격언"],["완벽하지 않아도 괜찮다, 오늘도 잘하고 있다.","격언"],["자신에게 친절하라, 그것이 치유의 시작이다.","격언"],["명상 10분이 뇌를 재충전한다.","의학 연구"],["복식호흡이 혈압을 낮춘다.","의학 상식"],["수영이 관절에 부담 없는 최고의 운동이다.","의학 상식"],["근력 운동이 노년의 낙상을 예방한다.","의학 연구"],["스트레칭이 혈액순환을 돕는다.","의학 상식"],["바른 자세가 만성 통증을 예방한다.","의학 상식"],["치아 건강이 심장 건강과 연결된다.","의학 연구"],["손 씻기가 감염병의 70%를 예방한다.","의학 상식"],["뼈 건강을 위해 칼슘과 비타민D를 챙겨라.","영양학"],["근육은 40대부터 매년 줄어든다, 지금 운동하라.","의학 상식"],["낮잠 20분이 오후 집중력을 두 배로 높인다.","의학 연구"],["취침 전 스마트폰은 수면을 방해한다.","의학 연구"],["같은 시간에 자고 일어나는 것이 생체 리듬을 지킨다.","의학 상식"],["혈압은 아침, 저녁 같은 시간에 재는 것이 정확하다.","의학 상식"],["콜레스테롤 수치를 1년에 한 번 확인하라.","의학 상식"],["신장 건강을 위해 물을 충분히 마셔라.","의학 상식"],["위 건강을 위해 맵고 짠 음식을 줄여라.","의학 상식"],["관절염은 초기에 관리할수록 예후가 좋다.","의학 상식"],["허리 통증은 코어 근육 강화로 예방한다.","의학 상식"],["무릎 건강을 위해 체중을 관리하라.","의학 상식"],["피부는 건강의 거울이다.","격언"],["비타민C가 면역력과 피부를 동시에 살린다.","영양학"],["마그네슘이 근육 경련을 예방한다.","영양학"],["철분 부족이 피로의 주범이다.","영양학"],["비타민B12가 신경 건강을 지킨다.","영양학"],["오늘 먹는 음식이 내일의 세포를 만든다.","영양학"],["가공식품을 줄이면 몸이 바뀐다.","영양학"],["천연 식품이 최고의 약이다.","히포크라테스"],["지중해식 식단이 장수의 비결이다.","의학 연구"],["마늘이 혈압과 면역력을 동시에 잡는다.","영양학"],["블루베리가 기억력을 향상시킨다.","의학 연구"],["토마토의 라이코펜이 암을 예방한다.","영양학"],["브로콜리가 해독을 돕는다.","영양학"],["현미가 혈당을 천천히 올린다.","영양학"],["귀리가 콜레스테롤을 낮춘다.","의학 연구"],["사과는 의사를 멀리하게 한다.","서양 속담"],["요거트가 장 건강을 살린다.","영양학"],["나이가 들수록 단백질이 더 필요하다.","의학 연구"],["근육이 있어야 오래 산다.","의학 연구"],["복부 비만이 만병의 근원이다.","의학 상식"],["체중 5% 감량이 혈압과 혈당을 낮춘다.","의학 연구"],["운동 없는 다이어트는 절반의 효과다.","의학 상식"],["천천히 빼야 오래 유지된다.","의학 상식"],["오늘 하루 수고한 내 몸에게 감사하라.","격언"],["내일도 건강한 하루가 되기를.","격언"],["오늘도 약을 거르지 않은 것이 큰 용기다.","격언"],["매일의 작은 실천이 기적을 만든다.","격언"],["포기하지 않는 것이 최고의 치료다.","격언"],["지금 이 순간, 당신은 충분히 잘하고 있다.","격언"],["오늘도 건강을 위해 노력하는 당신이 대단하다.","격언"],["건강한 나로 살아가는 것이 가족에 대한 사랑이다.","격언"],["100세 시대, 지금부터 준비하면 늦지 않다.","격언"],["활기찬 노년을 위해 지금 투자하라.","격언"],["당신의 건강을 응원합니다. 오늘도 화이팅!","격언"],["약 한 알의 힘을 믿어라.","격언"],["희망을 잃지 않는 것이 최고의 치료제다.","격언"],["긍정적인 생각이 면역 세포를 활성화한다.","의학 연구"],["웃음이 자연 진통제를 분비시킨다.","의학 연구"],["쉬는 것도 치료의 일부다.","격언"],["살아있다는 것이 이미 기적이다.","격언"],["건강하게 오래 사는 것이 진정한 성공이다.","격언"]];
+function save(){try{var obj={meds:meds,history:history,nextId:nextId};localStorage.setItem(KEY,JSON.stringify(obj));if(profileSrc){try{localStorage.setItem(KEY+'_profile',profileSrc);}catch(e){}}}catch(e){}}
+function load(){try{var s=localStorage.getItem(KEY);var data=s?JSON.parse(s):{};data.profileSrc=localStorage.getItem(KEY+'_profile')||null;return data;}catch(e){return {};}}
 var saved=load();
 var meds=saved.meds||[];
 var history=saved.history||{};
@@ -201,6 +194,7 @@ function pad(n){return String(n).padStart(2,'0');}
 function initClock(){function tick(){var n=new Date();document.getElementById('clockEl').textContent=pad(n.getHours())+':'+pad(n.getMinutes());}tick();setInterval(tick,10000);}
 function todayStr(){var d=['일','월','화','수','목','금','토'];return (today.getMonth()+1)+'월 '+today.getDate()+'일 ('+d[today.getDay()]+')';}
 function getHistory(key){if(!history[key])history[key]={};return history[key];}
+function showQuote(){var idx=Math.floor(Math.random()*QUOTES.length);document.getElementById('quoteText').textContent='"'+QUOTES[idx][0]+'"';document.getElementById('quoteSrc').textContent='— '+QUOTES[idx][1];}
 function renderHome(){
   document.getElementById('todayLabel').textContent=todayStr();
   var h=getHistory(todayKey);
@@ -208,76 +202,33 @@ function renderHome(){
   document.getElementById('todayRateLabel').textContent=rate===null?'오늘 이행률 —':rate===100?'오늘 이행률 100% 🎉':'오늘 이행률 '+rate+'%';
   document.getElementById('todayRateBar').style.width=(rate||0)+'%';
   var list=document.getElementById('med-list');
-  if(meds.length===0){list.innerHTML='<p class="empty-hint">아직 등록된 약이 없어요.<br>아래 + 버튼을 눌러 약을 추가해보세요.</p>';return;}
+  if(meds.length===0){list.innerHTML='<p class="empty-hint">아직 등록된 약이 없어요.<br>아래 + 버튼을 눌러<br>약을 추가해보세요.</p>';return;}
   var html='';
   for(var i=0;i<meds.length;i++){
     var m=meds[i];var done=!!h[m.id];
-    html+='<div class="med-card">'
-      +'<div class="med-main" onclick="toggleMed('+m.id+')">'
-      +'<div style="width:10px;height:10px;border-radius:50%;background:'+m.color+';flex-shrink:0"></div>'
-      +'<div style="flex:1"><div style="font-size:15px;font-weight:500;color:#1c1c1e;text-decoration:'+(done?'line-through':'none')+';opacity:'+(done?0.38:1)+'">'+m.name+'</div>'
-      +'<div style="font-size:12px;color:#8e8e93;margin-top:2px">'+m.time+' 알람 설정됨</div></div></div>'
+    html+='<div class="med-card"><div class="med-main" onclick="toggleMed('+m.id+')">'
+      +'<div class="med-dot" style="background:'+m.color+'"></div>'
+      +'<div style="flex:1"><div style="font-size:18px;font-weight:600;color:#1c1c1e;text-decoration:'+(done?'line-through':'none')+';opacity:'+(done?0.38:1)+'">'+m.name+'</div>'
+      +'<div style="font-size:14px;color:#8e8e93;margin-top:4px">'+m.time+' 복용</div></div></div>'
       +'<button class="edit-btn" onclick="openEditForm('+m.id+')">✎</button>'
-      +'<div class="check-btn '+(done?'done':'')+'" onclick="toggleMed('+m.id+')">'+(done?'✓':'')+'</div>'
-      +'</div>';
+      +'<div class="check-btn '+(done?'done':'')+'" onclick="toggleMed('+m.id+')">'+(done?'✓':'')+'</div></div>';
   }
   list.innerHTML=html;
 }
 function toggleMed(id){var h=getHistory(todayKey);if(h[id])delete h[id];else{h[id]=true;showToast('복용 완료! 👍');}save();renderHome();renderCal();}
-function openAddForm(){
-  document.getElementById('formTitle').textContent='약 추가';
-  document.getElementById('edit-id').value='';
-  document.getElementById('inp-name').value='';
-  document.getElementById('inp-time').value='09:00';
-  document.getElementById('inp-days').value='';
-  document.getElementById('del-btn').style.display='none';
-  showTab('add');
-}
-function openEditForm(id){
-  var m=meds.find(function(x){return x.id===id;});
-  if(!m)return;
-  document.getElementById('formTitle').textContent='약 수정';
-  document.getElementById('edit-id').value=id;
-  document.getElementById('inp-name').value=m.name;
-  document.getElementById('inp-time').value=m.time;
-  document.getElementById('inp-days').value=m.days;
-  document.getElementById('del-btn').style.display='block';
-  showTab('add');
-}
-function saveMed(){
-  var name=document.getElementById('inp-name').value.trim();
-  var time=document.getElementById('inp-time').value;
-  var days=parseInt(document.getElementById('inp-days').value)||30;
-  var editId=document.getElementById('edit-id').value;
-  if(!name){document.getElementById('inp-name').focus();return;}
-  if(editId){
-    var id=parseInt(editId);
-    for(var i=0;i<meds.length;i++){if(meds[i].id===id){meds[i].name=name;meds[i].time=time;meds[i].days=days;break;}}
-    showToast(name+' 수정됐어요!');
-  }else{
-    meds.push({id:nextId++,name:name,time:time,days:days,color:COLORS[meds.length%COLORS.length]});
-    showToast(name+' 추가됐어요!');
-  }
-  save();scheduleAlarms();showTab('home');
-}
-function deleteMed(){
-  var editId=document.getElementById('edit-id').value;
-  if(!editId)return;
-  var id=parseInt(editId);
-  var m=meds.find(function(x){return x.id===id;});
-  if(!m)return;
-  if(!confirm('"'+m.name+'"을 삭제할까요?'))return;
-  meds=meds.filter(function(x){return x.id!==id;});
-  save();showToast('삭제됐어요');showTab('home');
-}
+function openAddForm(){document.getElementById('formTitle').textContent='약 추가';document.getElementById('edit-id').value='';document.getElementById('inp-name').value='';document.getElementById('inp-time').value='09:00';document.getElementById('inp-days').value='';document.getElementById('del-btn').style.display='none';showTab('add');}
+function openEditForm(id){var m=meds.find(function(x){return x.id===id;});if(!m)return;document.getElementById('formTitle').textContent='약 수정';document.getElementById('edit-id').value=id;document.getElementById('inp-name').value=m.name;document.getElementById('inp-time').value=m.time;document.getElementById('inp-days').value=m.days;document.getElementById('del-btn').style.display='block';showTab('add');}
+function saveMed(){var name=document.getElementById('inp-name').value.trim();var time=document.getElementById('inp-time').value;var days=parseInt(document.getElementById('inp-days').value)||30;var editId=document.getElementById('edit-id').value;if(!name){document.getElementById('inp-name').focus();return;}if(editId){var id=parseInt(editId);for(var i=0;i<meds.length;i++){if(meds[i].id===id){meds[i].name=name;meds[i].time=time;meds[i].days=days;break;}}showToast(name+' 수정됐어요!');}else{meds.push({id:nextId++,name:name,time:time,days:days,color:COLORS[meds.length%COLORS.length]});showToast(name+' 추가됐어요!');}save();scheduleAlarms();showTab('home');}
+function deleteMed(){var editId=document.getElementById('edit-id').value;if(!editId)return;var id=parseInt(editId);var m=meds.find(function(x){return x.id===id;});if(!m)return;if(!confirm('"'+m.name+'"을 삭제할까요?'))return;meds=meds.filter(function(x){return x.id!==id;});save();showToast('삭제됐어요');showTab('home');}
 function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2300);}
-function loadProfile(e){var file=e.target.files[0];if(!file)return;var r=new FileReader();r.onload=function(ev){profileSrc=ev.target.result;document.getElementById('profileImg').src=profileSrc;document.getElementById('profileImg').style.display='block';document.getElementById('profilePlaceholder').style.display='none';save();showToast('프로필 사진이 등록됐어요!');};r.readAsDataURL(file);}
-function applyProfile(){if(!profileSrc)return;document.getElementById('profileImg').src=profileSrc;document.getElementById('profileImg').style.display='block';document.getElementById('profilePlaceholder').style.display='none';}
+function loadProfile(e){var file=e.target.files[0];if(!file)return;var r=new FileReader();r.onload=function(ev){profileSrc=ev.target.result;try{localStorage.setItem(KEY+'_profile',profileSrc);}catch(e){}applyProfile();showToast('프로필 사진이 등록됐어요!');};r.readAsDataURL(file);}
+function applyProfile(){if(!profileSrc)return;var img=document.getElementById('profileImg');img.src=profileSrc;img.style.display='block';document.getElementById('profilePlaceholder').style.display='none';}
+function playAlarmSound(){try{var ctx=new(window.AudioContext||window.webkitAudioContext)();function beep(freq,start,dur){var o=ctx.createOscillator();var g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.frequency.value=freq;o.type='sine';g.gain.setValueAtTime(0.5,ctx.currentTime+start);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+start+dur);o.start(ctx.currentTime+start);o.stop(ctx.currentTime+start+dur);}beep(880,0,0.15);beep(880,0.2,0.15);beep(1100,0.4,0.3);}catch(e){}try{if(navigator.vibrate)navigator.vibrate([400,200,400,200,600]);}catch(e){}}
 function scheduleAlarms(){for(var i=0;i<meds.length;i++){(function(m){var parts=m.time.split(':');var h=parseInt(parts[0]),mn=parseInt(parts[1]);var now=new Date();var target=new Date(now.getFullYear(),now.getMonth(),now.getDate(),h,mn,0);var diff=target-now;if(diff<0)diff+=86400000;setTimeout(function(){triggerAlarm(m);},diff);})(meds[i]);}}
-function triggerAlarm(med){if(getHistory(todayKey)[med.id])return;if(typeof Notification!=='undefined'&&Notification.permission==='granted')new Notification('약 먹었어?',{body:med.name+' 복용 시간이에요!',icon:'icon-192.png'});alarmQueue.push(med);if(!document.getElementById('alarmOverlay').classList.contains('show'))showAlarmModal();}
+function triggerAlarm(med){if(getHistory(todayKey)[med.id])return;playAlarmSound();if(typeof Notification!=='undefined'&&Notification.permission==='granted'){new Notification('약 먹었어?',{body:med.name+' 복용 시간이에요! 💊',icon:'icon-192.png',vibrate:[400,200,400]});}alarmQueue.push(med);if(!document.getElementById('alarmOverlay').classList.contains('show'))showAlarmModal();}
 function showAlarmModal(){if(!alarmQueue.length)return;currentAlarmMed=alarmQueue.shift();document.getElementById('alarmMedName').textContent=currentAlarmMed.name;document.getElementById('alarmTimeLabel').textContent=currentAlarmMed.time+' 복용 시간이에요';var ai=document.getElementById('alarmProfileImg');if(profileSrc){ai.src=profileSrc;ai.style.display='block';}else{ai.style.display='none';}document.getElementById('alarmOverlay').classList.add('show');startCountdown(300);}
 function startCountdown(secs){if(cdInterval)clearInterval(cdInterval);cdSeconds=secs;updateRing();cdInterval=setInterval(function(){cdSeconds--;updateRing();if(cdSeconds<=0){clearInterval(cdInterval);missedAlarm();}},1000);}
-function updateRing(){var circ=2*Math.PI*36,offset=circ*(1-cdSeconds/300);var ring=document.getElementById('ringCircle');ring.style.strokeDashoffset=offset;ring.style.stroke=cdSeconds<=60?'#E24B4A':cdSeconds<=120?'#BA7517':'#1D9E75';document.getElementById('countdownNum').textContent=Math.floor(cdSeconds/60)+':'+pad(cdSeconds%60);}
+function updateRing(){var circ=2*Math.PI*43,offset=circ*(1-cdSeconds/300);var ring=document.getElementById('ringCircle');ring.style.strokeDashoffset=offset;ring.style.stroke=cdSeconds<=60?'#E24B4A':cdSeconds<=120?'#BA7517':'#1D9E75';document.getElementById('countdownNum').textContent=Math.floor(cdSeconds/60)+':'+pad(cdSeconds%60);}
 function confirmTaken(){clearInterval(cdInterval);getHistory(todayKey)[currentAlarmMed.id]=true;document.getElementById('alarmOverlay').classList.remove('show');save();showToast('잘했어요! 오늘도 건강하게 💊');renderHome();renderCal();if(alarmQueue.length)setTimeout(showAlarmModal,600);}
 function snoozeAlarm(){clearInterval(cdInterval);document.getElementById('alarmOverlay').classList.remove('show');showToast('5분 후 다시 알려드릴게요');var med=currentAlarmMed;setTimeout(function(){alarmQueue.unshift(med);showAlarmModal();},300000);if(alarmQueue.length)setTimeout(showAlarmModal,600);}
 function missedAlarm(){document.getElementById('alarmOverlay').classList.remove('show');showToast('지금이라도 드세요! 💊');if(alarmQueue.length)setTimeout(showAlarmModal,600);}
@@ -285,7 +236,7 @@ function renderCal(){var year=today.getFullYear(),month=today.getMonth();var fir
 function showTab(name){['home','add','cal'].forEach(function(n){document.getElementById('screen-'+n).classList.toggle('active',n===name);document.getElementById('tab-'+n).classList.toggle('active',n===name);});if(name==='home')renderHome();if(name==='cal')renderCal();}
 if(typeof Notification!=='undefined'&&Notification.permission==='default')setTimeout(function(){Notification.requestPermission();},2000);
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){});
-initClock();applyProfile();renderHome();scheduleAlarms();
+initClock();applyProfile();showQuote();renderHome();scheduleAlarms();
 </script>
 </body>
 </html>
